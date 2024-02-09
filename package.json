@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Learning the basic examples of nodeJS framework",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "zubairmoerat",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.0.3"
-  }
+  "license": "ISC"
 }

@@ -74,3 +74,28 @@
 // }).listen(port, ()=>{
 //     console.log(`Server is running on: http://localhost:${port}`);
 // })
+
+// API is needed to add new features into your APP/WEB
+
+// const http = require('http');
+import http from 'http';
+
+// create a server
+const port = +process.env.PORT || 4000;
+http.createServer((req, res)=>{
+    res.writeHead(200, {
+        'Content-type' : 'application/json'
+    })
+    switch(req.url) {
+        case '/': 
+            res.end(JSON.stringify('You are on the home PAGE'))
+        break
+        case '/about':
+            res.end(JSON.stringify('You are on the about page'))
+        break
+        default:
+            res.end(JSON.stringify('ERROR 404'))
+        break
+}}).listen(port, ()=> {
+    console.log(`Server is running on: http://localhost:${port}`);
+})
